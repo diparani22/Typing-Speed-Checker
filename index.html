@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypingFlow | Premium Typing Speed Checker</title>
+    <meta name="description"
+        content="Master your typing speed with TypingFlow. A premium, modern, and interactive typing checker with real-time analytics.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-glow"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">⚡</span> TypingFlow
+            </div>
+            <div class="nav-links">
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+                    <svg class="sun" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content container">
+        <section class="stats-bar glass">
+            <div class="stat-item">
+                <span class="stat-label">Time</span>
+                <span id="timer" class="stat-value">60s</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">WPM</span>
+                <span id="wpm" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Accuracy</span>
+                <span id="accuracy" class="stat-value">100%</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Errors</span>
+                <span id="errors" class="stat-value">0</span>
+            </div>
+        </section>
+
+        <section class="typing-container glass">
+            <div id="text-display" class="text-display">
+                <!-- Text will be injected here -->
+                <div class="loader">Loading challenge...</div>
+            </div>
+            <div class="input-area">
+                <textarea id="typing-input" autocomplete="off" autofocus
+                    placeholder="Type the challenge text shown above here..."></textarea>
+                <button id="reset-btn" class="btn-primary">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 1.2rem;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                        </path>
+                    </svg>
+                    Reset
+                </button>
+            </div>
+        </section>
+
+        <section class="settings glass">
+            <div class="setting-group">
+                <span class="setting-title">Duration</span>
+                <div class="option-chips">
+                    <button class="chip active" data-time="15">15s</button>
+                    <button class="chip" data-time="30">30s</button>
+                    <button class="chip" data-time="60">60s</button>
+                </div>
+            </div>
+            <div class="setting-group">
+                <span class="setting-title">Language</span>
+                <div class="option-chips" id="language-chips">
+                    <button class="chip active" data-lang="en">English</button>
+                    <button class="chip" data-lang="bn">Bengali</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="leaderboard glass">
+            <h3 class="section-title">Highest Record</h3>
+            <div id="best-score" class="best-score">
+                No records yet. Start typing to set a high score!
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <p>&copy; 2025 TypingFlow.Dipa Rani</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
